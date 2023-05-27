@@ -7,7 +7,14 @@ an expected string but has mismatched characters, for example, strings
 extracted from OCR tools like pytesseract. In fact, that is the reason behind 
 the creation of this library.
 
-For example, suppose there is a script that extracts text from an image 
+## Installation
+```commandline
+pip install slimpy
+```
+
+## Example
+
+Suppose there is a script that extracts text from an image 
 and there is an expected word to be present in the extracted text:
 
 ```python
