@@ -23,7 +23,7 @@ from slimpy import Fragment, REM  # main player of this tutorial
 from re import search, error as rer  # for new class we will define
 
 # If your tesseract executable not in path, first specify the path to it
-pytesseract.pytesseract.tesseract_cmd = path_to_executable\exe_name.exe
+# pytesseract.pytesseract.tesseract_cmd = path_to_executable\exe_name.exe
 
 
 # Lets create custom class that can extract fields from image
