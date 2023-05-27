@@ -1,0 +1,5 @@
+This directory contain images that used in Tutorial.py
+
+The original images is a RGB image format, and preprocesed to yield better result
+
+Censoring the image utilize this library to find the pixel coordinate of an anchor string to automate the censorship
