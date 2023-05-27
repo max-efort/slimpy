@@ -2,14 +2,14 @@
 We are going to extract information from images of a person id card,
 to be more specific we are going to extract name, sex, marital status and job.
 
-Images sample used are inside "image" dir. All are already censored and
+Images sample used are inside "images" dir. All are already censored and
 preprocessed to yield better result.
 
 (A quick note, the process of censoring the image utilize this library
 to find the pixel coordinate of an anchor string to automate the censorship,
 but we won't discuss it here, maybe some other time)
 
-If you confuse by the code in this tutorial, see the API doc to know more about
+If you confused by the code in this tutorial, see the API documentation to know more about
 the package
 """
 # First let's import the necessary module
@@ -23,8 +23,7 @@ from slimpy import Fragment, REM  # main player of this tutorial
 from re import search, error as rer  # for new class we will define
 
 # If your tesseract executable not in path, first specify the path to it
-pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
-# pytesseract.pytesseract.tesseract_cmd = r"path_to_executable\exe_name.exe"
+pytesseract.pytesseract.tesseract_cmd = path_to_executable\exe_name.exe
 
 
 # Lets create custom class that can extract fields from image
@@ -120,8 +119,8 @@ def clean_non_uppercase(string):
 
 
 def find_trailing_Uppercase_index(string, str_len=None, increment=1):
-    """child of clean_non_uppercase function. It iterate the index until it find
-     an uppercase letter. The index used to slice the string."""
+    """Child of clean_non_uppercase function. It iterate the index until it find
+     an uppercase letter. The index will be used to slice the string."""
     str_len = len(string) if str_len is None else str_len
     start = 0 if increment == 1 else -1
     for r in range(start, str_len * increment, increment):
@@ -145,7 +144,7 @@ for i in range(len(fields_name)):
     extract.add_rule(fields_name[i], fragments_start, fragments_end)
 
 # Now prepare the image
-images_source_path = r"../../test_sub/extract data kusuka/source prepared"
+images_source_path = path_to_images
 # Convert path string to Path
 images_source_path = Path(images_source_path)
 # Search all image path in that directory
@@ -219,7 +218,7 @@ for i in range(len(fields_name)):
 print('\n', extract_accumulator)
 
 """
-As you can see, some field are missing and some aren't what like intended, 
+As you can see, some field are missing and some aren't like what we intended it to be, 
 there is many situation that could lead to this and from developer perspective 
 there should be some unoptimized and miss written code somewhere.
 Maybe it will be found in the future by someone and there would be and update
