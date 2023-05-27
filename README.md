@@ -37,4 +37,4 @@ match.pattern
 
 That's it! As mentioned earlier, searching and identifying strings that may 
 have unexpected characters. 
-For more information, see the doc.
+For more information, see some documentation inside doc.
