@@ -144,6 +144,7 @@ for i in range(len(fields_name)):
     extract.add_rule(fields_name[i], fragments_start, fragments_end)
 
 # Now prepare the image
+path_to_images = None  # specify the path to the images
 images_source_path = path_to_images
 # Convert path string to Path
 images_source_path = Path(images_source_path)
