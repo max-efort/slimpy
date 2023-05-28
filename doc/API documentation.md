@@ -13,7 +13,7 @@ from slimpy import Fragment, REM
 and 1 as an output object to simplify accessing result.
 
 There is only one type of exception in slimpy which is a AssertionError, I only implement it to 
-assert bad passed argument.
+assert illegal argument being passed.
 
 ## Class: Fragment
 It's main purpose is to compute possible combinations of fragments. It is done by slicing a string 
