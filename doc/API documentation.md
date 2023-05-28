@@ -2,7 +2,7 @@
 In the scope of this library, there are three keyword that need to understand:
 1. Fragmentation: The technique or algorithm implemented in this library to slice a string.
 2. Fragment: A slice of string, the smallest unit.
-3. Fragments: One combination of a sliced string, A unit contain a list of fragment.
+3. Fragments: One combination of a sliced string, a unit that contain a list of fragment.
 
 There are three classes in this library as the main interface to use, 2 are what you will probably
 use: 
